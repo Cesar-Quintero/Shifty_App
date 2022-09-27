@@ -1,0 +1,377 @@
+.calendarContainer {
+  width: 100%;
+}
+
+.calAndForm {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+}
+
+.onlyCalendar {
+  /* border: solid 1px red; */
+  width: 100%;
+}
+
+.availText {
+  width: 85%;
+}
+
+.availForm {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+}
+
+.avail {
+  display: flex;
+  width: 100%;
+}
+
+.avail .availCheckboxes {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.avail .availShifts {
+  display: flex;
+  flex-flow: column;
+  justify-content:flex-start;
+}
+
+.avail .availCheckboxes label, 
+.avail .availCheckboxes input{
+  margin: .25rem 0;
+  flex-grow: 1;
+}
+
+.availSubmit {
+  margin: 1em 0;
+}
+
+#topCalendar {
+  color: #d36c6c;
+  display: flex;
+  justify-content: space-between;
+}
+
+#monthDisplay {
+  display: flex;
+  width: 50%;
+}
+
+.calBtns {
+  width: 50%;
+  display: flex;
+  justify-content:end;
+}
+
+#backButton, #nextButton {
+  padding: 0 1.8em;
+  margin: 0 .5rem;
+}
+
+#weekdays {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  color: #247BA0;
+}
+
+#weekdays div {
+  margin: auto;
+}
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+}
+.day {
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0px 0px 3px #CBD4C2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+}
+
+.day::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.day:hover {
+  background-color: #f2f2f2;
+}
+
+.day + #currentDay {
+  background-color:#e8f4fa;
+}
+.event {
+  color: white;
+  overflow: hidden;
+}
+
+.event i {
+  font-size: 1.5rem;
+  color: #009dff;
+}
+
+.padding {
+  cursor: default !important;
+  background-color: #FFFCFF !important;
+  box-shadow: none !important;
+}
+#newEventModal, #deleteEventModal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: fixed;
+  font-family: sans-serif;
+}
+
+#deleteEventModal span {
+  font-weight: bolder;
+}
+#deleteEventModal p {
+  font-size: 1.5rem;
+  font-weight:100;
+}
+
+#eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+#eventTitleInput.error {
+  border: 2px solid red;
+  color: black !important;
+}
+
+#eventText {
+  font-size: 14px;
+}
+#modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+
+
+
+
+
+
+.rmPad {
+  padding: 0;
+}
+
+.bodyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 20px;
+}
+.blueBg {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2E3842;
+  box-shadow: 0 5px 45px rgba(0,0,0,0.15);
+}
+
+.blueBg .box {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+}
+
+.blueBg .box p {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.formBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 45px rgba(0,0,0,0.25);
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+
+.formBx.active {
+  left: 50%;
+}
+
+.formBx .form {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+  transition: 0.5s;
+}
+
+.formBx .signinForm {
+  transition-delay: 0.25s;
+}
+
+.formBx.active .signinForm {
+  left: -100%;
+  transition-delay: 0s;
+}
+
+.formBx .signupForm {
+  left: 100%;
+  transition-delay: 0s;
+}
+
+.formBx.active .signupForm {
+  left: 0;
+  transition-delay: 0.25s;
+}
+
+.formBx .form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formBx .form form h4 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.formBx .form form input {
+  margin-bottom: 20px;
+  outline: none;
+  border: 1px solid #333;
+}
+
+/* .formBx .form form input[type="submit"] {
+  background: #03a9f4;
+  border: none;
+  color: #fff;
+  max-width: 100px;
+  cursor: pointer;
+} */
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 400px;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .blueBg {
+    top: 0;
+    height: 100%;
+  }
+
+  .formBx {
+    width: 100%;
+    height: 500px;
+    top: 0;
+    box-shadow: none;
+  }
+
+  .blueBg .box {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .box.signin {
+    top: 0;
+  }
+
+  .formBx.active {
+    left: 0;
+    top: 150px
+  }
+}
+
+@media only screen and (max-width: 601px) {
+  .calAndForm {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .availText {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .availForm {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  .shiftRender {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}

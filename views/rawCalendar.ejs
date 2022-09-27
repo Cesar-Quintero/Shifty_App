@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Shifty</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="rawCalendar.ejs">Shifty</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="/rawCalendar.ejs">Schedule</a></li>
+											<li><a href="/logout">Logout</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<section class="wrapper style5">
+							<div class="inner">
+
+                <div class="calendarContainer">
+                  
+                  <div>
+                    <p class="shiftData" style="display: none;">
+                      <%=shift[0]%></p>
+                    <div>
+                      <p<br>(<i>please submit your availability</i>)</p>
+                    </div>
+                  </div>
+                    
+                  <div class="calAndForm">
+
+                    <div class="availForm">
+                      <h3>Choose Availability</h3>
+                      <form action="/shift/createShift" method="POST">
+                        <div class="avail">
+                          <div class="availCheckboxes">
+                            <h6>Weekday</h6>
+                            <input type="checkbox" id="cbSun" name="cbSun" >
+                            <label for="cbSun">Sunday</label>
+                            <input type="checkbox" id="cbMon" name="cbMon" >
+                            <label for="cbMon">Monday</label>
+                            <input type="checkbox" id="cbTues" name="cbTues" >
+                            <label for="cbTues">Tuesday</label>
+                            <input type="checkbox" id="cbWed" name="cbWed" >
+                            <label for="cbWed">Wednesday</label>
+                            <input type="checkbox" id="cbThur" name="cbThur" >
+                            <label for="cbThur">Thursday</label>
+                            <input type="checkbox" id="cbFri" name="cbFri" >
+                            <label for="cbFri">Friday</label>
+                            <input type="checkbox" id="cbSat" name="cbSat" >
+                            <label for="cbSat">Saturday</label>
+                          </div>
+                          <div class="availShifts">
+                            <h6>Shift</h6>
+                            <input type="checkbox" id="mornShift" name="mornShift" >
+                            <label for="mornShift">6 am - 2 pm</label>
+                            <input type="checkbox" id="midShift" name="midShift" >
+                            <label for="midShift">8 am - 4 pm</label>
+                            <input type="checkbox" id="nightShift" name="nightShift" >
+                            <label for="nightShift">2 pm - 10 pm</label>
+                          </div>
+                        </div>
+                        <div class="availSubmit">
+                          <input type="submit" value="Submit" class="primary" />
+													<input type="reset" value="Reset" />
+                        </div>
+                      </form>
+                    </div>
+
+                  <div class="onlyCalendar">
+                    <div id="topCalendar">
+                      <h3 id="monthDisplay"></h3>
+                      <div>
+                        <button id="backButton" class="button primary icon solid fa-arrow-left-long"></button>
+                        <button id="nextButton" class="button primary icon solid fa-arrow-right-long"></button>
+                      </div>
+                    </div>
+
+                    <div id="weekdays">
+                      <div>Su</div>
+                      <div>Mo</div>
+                      <div>Tu</div>
+                      <div>We</div>
+                      <div>Th</div>
+                      <div>Fr</div>
+                      <div>Sa</div>
+                    </div>
+            
+                    <div id="calendar"></div>
+                  </div>
+                    
+                  </div>
+                  </div>
+                          
+                  <div id="newEventModal">
+                    <h4>Request Day Off</h4>
+            
+                    <input type="text" id="eventTitleInput" placeholder="Reason for request" />
+                    <div class="reqBtns">
+                      <button type="button" id="saveButton" class="button primary small">Save</button>
+                      <button type="button" id="cancelButton" class="button small">Cancel</button>
+                    </div>
+                  </div>
+            
+                  <div id="deleteEventModal">
+                    <h4>Day off Requested</h4>
+            
+                    <span>Reason: <p id="eventText"></p></span>
+                    <div class="reqBtns">
+                      <button type="button" id="deleteButton" class="button primary small">Delete</button>
+                      <button type="button" id="closeButton" class="button small">Close</button>
+                    </div>
+                  </div>
+            
+                  <div id="modalBackDrop"></div>
+                </div>
+
+							</div>
+						</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Shifty</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="#">Shifty</a></h1>
+						<!-- <nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Index</a></li>
+											<li><a href="homePage.html">Home Page</a></li>
+											<li><a href="elements.html">Elements</a></li>
+											<li><a href="entry.html">Login/Sign up</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav> -->
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<section class="wrapper rmPad style5">
+							<div class="inner">
+
+                <% if (locals.messages.errors) { %>
+                  <% messages.errors.forEach( el => { %>
+                      <div class="alert alert-danger"><%= el.msg %></div>
+                  <% }) %>    
+              <% } %>
+              <% if (locals.messages.info) { %>
+                  <% messages.info.forEach( el => { %>
+                      <div class="alert alert-info"><%= el.msg %></div>
+                  <% }) %>    
+              <% } %>
+
+                <div class="bodyContainer">
+                <div class="container">
+                  <div class="blueBg">
+                    <div class="box signin">
+                      <p>Already Have an Account?</p>
+                      <a href="/login"><button type="button" class="button primary small signinBtn">Login</button></a>
+                    </div>
+                    <div class="box signup">
+                      <p>Don't Have an Account?</p>
+                      <button type="button" class="button primary small signupBtn">Sign up</button>
+                    </div>
+                  </div>
+                  <div class="formBx">
+                    <div class="form signinForm">
+                      <form action="/login" method="POST">
+                        <h4>Login</h4>
+                        <input type="email" placeholder="Email" name="email">
+                        <input type="password" placeholder="Password" name="password">
+                        <input type="submit" value="Login" class="primary">
+                      </form>
+                    </div>
+                    <div class="form signupForm">
+                      <form action="/signupPostFirstTime" method="POST">
+                        <h4>Sign Up</h4>
+                        <input type="text" placeholder="Username" name="userName" >
+                        <input type="email" placeholder="Email Address" name="email" >
+                        <input type="password" placeholder="Password" name="password" >
+                        <input type="password" placeholder="Confirm Password" name="confirmPassword" >
+                        <input type="submit" value="Register" class="primary" >
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+							</div>
+						</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+    <script>
+      const signinBtn = document.querySelector('.signinBtn');
+      const signupBtn = document.querySelector('.signupBtn');
+      const formBx = document.querySelector('.formBx');
+      const body = document.querySelector('.bodyContainer');
+
+      window.onload = function() {
+        formBx.classList.add('active')
+        body.classList.add('active')
+      }
+    </script>
+    <script src="assets/js/script.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
