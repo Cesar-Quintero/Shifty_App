@@ -13,7 +13,7 @@ const postRoutes = require("./routes/posts");
 const availabilityRoutes = require("./routes/shifts")
 
 //Use .env file in config folder
-require("dotenv").config({ path: "config/.env" });
+require("dotenv").config({ path: "./config/.env" });
 
 // Passport config
 require("./config/passport")(passport);
@@ -60,6 +60,6 @@ app.use("/post", postRoutes);
 app.use("/shift", availabilityRoutes);
 
 //Server Running
-app.listen(process.env.PORT || PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!");
 });
