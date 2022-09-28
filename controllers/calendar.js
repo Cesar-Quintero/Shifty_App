@@ -4,7 +4,11 @@ module.exports = {
   getCalendar: async (req, res) => {
     try {
       const shift = await Shift.find({ user: req.user.id });
-      res.render("calendar.ejs", { shift: shift, user: req.user });
+      if (shift[0] !== undefined) {
+        res.render("calendar.ejs", { shift: shift, user: req.user });
+      } else {
+        res.redirect("/rawCalendar");
+      }
     } catch (err) {
       console.log(err);
     }
