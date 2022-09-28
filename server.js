@@ -13,7 +13,7 @@ const postRoutes = require("./routes/posts");
 const availabilityRoutes = require("./routes/shifts")
 
 //Use .env file in config folder
-require("dotenv").config({ path: "./config/.env" });
+require("dotenv").config({ path: "config/.env" });
 
 // Passport config
 require("./config/passport")(passport);
