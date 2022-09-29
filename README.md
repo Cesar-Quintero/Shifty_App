@@ -6,7 +6,7 @@
 
 #### Full-stack CRUD app where employees can login, set schedule availability, request days off, view payroll and taxes information, all in one easy-to-use, mobile-friendly application.
 
-#### Make your own account or use the demo account
+## Make your own account or use the demo account
 # Email: demo
 # Password: demo1234
 
