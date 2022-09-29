@@ -1,7 +1,7 @@
 # Shifty : <a target="_blank" href="https://shiftyapp.herokuapp.com/">Visit Here</a>
 
 <a target="_blank" href="https://shiftyapp.herokuapp.com/">
-<img src="https://media1.giphy.com/media/Kb14oKsTBZ755MVznM/giphy.gif?cid=790b76110eab55d7ad7496457ad220a04dd796803baa37ad&rid=giphy.gif&ct=g" width="100%" alt="Coiffeur"/>
+<img src="https://media3.giphy.com/media/yzxUnl4lETkJVE6y96/giphy.gif?cid=790b761127c8f56677a4a2a98f1c85d5fc70922c0859bfee&rid=giphy.gif&ct=g" width="100%" alt="Coiffeur"/>
 </a>
 
 #### Full-stack CRUD app where employees can login, set schedule availability, request days off, view payroll and taxes information, all in one easy-to-use, mobile-friendly application.
