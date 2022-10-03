@@ -303,6 +303,7 @@
 .chartAndInfo {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .dNutChart, .payDayInfo{
@@ -310,7 +311,11 @@
   margin: 0 1rem 4rem;
 }
 
-.dNutChart h2 {
+.dNutChart span {
+  font-weight: 600;
+}
+
+.dNutChart {
   text-align: center;
 }
 
@@ -390,6 +395,10 @@ tr td, tr th {
   
   .payDayInfo {
     align-self: center;
+  }
+
+  .takeHome {
+    text-align: center;
   }
 }
 
