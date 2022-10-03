@@ -300,13 +300,44 @@
   border: 1px solid #333;
 }
 
-/* .formBx .form form input[type="submit"] {
-  background: #03a9f4;
-  border: none;
-  color: #fff;
-  max-width: 100px;
-  cursor: pointer;
-} */
+.chartAndInfo {
+  display: flex;
+  flex-direction: row;
+}
+
+.dNutChart, .payDayInfo{
+  width: 50%;
+  margin: 0 1rem 4rem;
+}
+
+.dNutChart h2 {
+  text-align: center;
+}
+
+.payDayInfo {
+  align-self: center;
+}
+
+.takeHome {
+  margin-bottom: 2rem;
+}
+
+.takeHome h2 {
+  margin-bottom: 0;
+}
+
+tr {
+ display: flex;
+ justify-content: space-between;
+}
+
+tr td, tr th {
+  margin: 0 1rem 0 0;
+}
+
+.payDayInfoHours {
+  justify-content: left;
+}
 
 @media (max-width: 991px) {
   .container {
@@ -345,6 +376,32 @@
     left: 0;
     top: 150px
   }
+
+  /* payroll and taxes */
+  .chartAndInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dNutChart, .payDayInfo{
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .payDayInfo {
+    align-self: center;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  tr {
+    display: flex;
+    justify-content: space-between;
+   }
+   
+   tr td, tr th {
+     margin: 0 10% 0 0;
+   }
 }
 
 @media only screen and (max-width: 601px) {
@@ -374,4 +431,25 @@
     flex-flow: column wrap;
     align-items: center;
   }
+
+  tr {
+    display: flex;
+    justify-content: space-between;
+   }
+   
+   tr td, tr th {
+     margin: 0 10% 0 0;
+   }
 }
+
+@media only screen and (max-width: 601px) {
+  tr {
+    display: flex;
+    justify-content: space-between;
+   }
+   
+   tr td, tr th {
+     margin: 0;
+   }
+}
+
