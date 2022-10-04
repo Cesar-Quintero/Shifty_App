@@ -13,7 +13,7 @@
 ## Tech used: ![HTML5 BADGE](https://img.shields.io/static/v1?label=|&message=HTML5&color=23555f&style=plastic&logo=html5)![CSS BADGE](https://img.shields.io/static/v1?label=|&message=CSS3&color=285f65&style=plastic&logo=css3)![SASS BADGE](https://img.shields.io/static/v1?label=|&message=SASS&color=285f65&style=plastic&logo=sass)![JAVASCRIPT BADGE](https://img.shields.io/static/v1?label=|&message=JAVASCRIPT&color=3c7f5d&style=plastic&logo=javascript)![BOOTSTRAP BADGE](https://img.shields.io/static/v1?label=|&message=BOOTSTRAP&color=316c5e&style=plastic&logo=bootstrap)![MONGODB BADGE](https://img.shields.io/static/v1?label=|&message=MONGO-DB&color=cdd148&style=plastic&logo=mongodb)![NODE BADGE](https://img.shields.io/static/v1?label=|&message=NODE&color=bbb111&style=plastic&logo=nodedotjs)![EXPRESS BADGE](https://img.shields.io/static/v1?label=|&message=EXPRESS&color=bbb111&style=plastic&logo=express)![HEROKU BADGE](https://img.shields.io/static/v1?label=|&message=HEROKU&color=bbb111&style=plastic&logo=heroku)![POSTMAN BADGE](https://img.shields.io/static/v1?label=|&message=POSTMAN&color=bbb111&style=plastic&logo=postman)
 
 
-My focus was to construct a seemless authentication experience, implment MVC structure for scalability, create a real-time-calendar for schedule page, apply beautiful aesthetics to each component, and allow for responsive designs and accessibility for my target audience.
+My focus was to construct a seemless authentication experience, implement MVC structure for scalability, create a real-time-calendar for schedule page, apply beautiful aesthetics to each component, and allow for responsive designs and accessibility for my target audience.
 
 ## Optimizations
 
